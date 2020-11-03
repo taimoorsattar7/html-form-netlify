@@ -10,7 +10,7 @@ const message = document.getElementById('message');
 const avatar = document.getElementById("avatar");
 const positions = document.getElementById("positions");
 
-let arrayInputs = [firstName, lastName, email, telephone, message, avatar];
+let arrayInputs = [firstName, lastName, email, telephone, message];
 
 const button = document.getElementById('btn');
 

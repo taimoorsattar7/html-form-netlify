@@ -25,10 +25,6 @@
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
       </p>
 
-      <div data-netlify-recaptcha="true"></div>
-
-      
-
       <h1 class="headline">Jobs Application Form</h1>
       <p class="headline headline__text headline__fail" id="error-message"></p>
 
@@ -100,20 +96,16 @@
       <select name="positions"
               id="positions"
               onchange="showDiv(this)">
-          <option value="frontEnd"
-                  data-handler="frontEnd">
+          <option value="frontEnd">
             Front End Developer
           </option>
 
-          <option value="designer"
-                  data-handler="designer">
+          <option value="designer">
             Designer
           </option>
       </select>
 
-      <div class="revealmessage1 hidden">
-        
-      </div>
+      <div data-netlify-recaptcha="true"></div>
       
       <input id="btn"
              type="submit"
