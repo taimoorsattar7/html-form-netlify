@@ -5,12 +5,11 @@ const errorMessage = document.getElementById('error-message');
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
 const email = document.getElementById('email');
-const telephone = document.getElementById('telephone');
 const message = document.getElementById('message');
 const avatar = document.getElementById("avatar");
 const positions = document.getElementById("positions");
 
-let arrayInputs = [firstName, lastName, email, telephone, message];
+let arrayInputs = [firstName, lastName, email, message];
 
 const button = document.getElementById('btn');
 
@@ -23,8 +22,7 @@ let pattern = {
 	url: /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/g,
 	userName: /^[a-z][a-z0-9]{7,50}$/i,
 	tags: /^[\a-z]+(?:,[\a-z]+){0,4}$/g,
-	password: /^[\w@-]{8,20}$/,
-	tel: /^\d{11}$/,
+	password: /^[\w@-]{8,20}$/
 };
 
 // Avatar 
@@ -51,6 +49,7 @@ function valudateInput(type, value){
 
 function handleSubmit(e) {
 	e.preventDefault();
+
 	errorMessage.innerText = "";
 
 	// Disable the button during form submission 
@@ -63,6 +62,7 @@ function handleSubmit(e) {
 	let isError = false;
 	arrayInputs.forEach(function (input) {
 		// input.value, input.name, input.type
+
 		if(!valudateInput(input.type, input.value)){
 			errorMessage.innerText = "Please Fill the inputs!!!";
 			errorMessage.scrollIntoView();
